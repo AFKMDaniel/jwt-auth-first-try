@@ -21,7 +21,7 @@ module.exports = (req,res,next) => {
             throw ApiError.unauthorizedError();
         }
 
-        req.user = userData;
+        // req.user = userData;
         next();
     } catch (error) {
         return next(ApiError.unauthorizedError());

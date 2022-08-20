@@ -46,7 +46,7 @@ class UserService {
         const tokens = tokenService.generateTokens({...userDto});
         await tokenService.saveToken(userDto.id,tokens.refreshToken);
 
-        return {...tokens,userDto};
+        return {...tokens,user:userDto};
     }
 
     async logout(refreshToken){
